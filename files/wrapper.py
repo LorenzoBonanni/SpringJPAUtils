@@ -9,13 +9,13 @@ def get_getter(classname: str):
 
 def get_setter(classname: str, java_list: str):
     return f"\tpublic void set{classname}s({java_list}) {{\n" + \
-           f"\t\treturn {classname.lower()}s;\n" + \
+           f"\t\tthis.{classname.lower()}s = {classname.lower()}s;\n" + \
            "\t}\n"
 
 
 def get_constructor(class_name, wrapper_name, java_list):
     return f"\tpublic {wrapper_name}({java_list}) {{\n" + \
-           f"\t\tthis.{class_name.lower()}s = {class_name.lower()}s\n" + \
+           f"\t\tthis.{class_name.lower()}s = {class_name.lower()}s;\n" + \
            "\t}\n"
 
 
