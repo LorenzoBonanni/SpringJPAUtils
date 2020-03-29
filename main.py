@@ -1,6 +1,4 @@
-import time
 from tkinter import filedialog
-from tkinter.messagebox import showinfo
 from tkinter import *
 from callbacks import *
 

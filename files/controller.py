@@ -31,8 +31,8 @@ def create_update(class_name):
 
 def create_delete(class_name, content):
     return '\t@RequestMapping(method = RequestMethod.DELETE, value = "/{id}")\n' + \
-           f"\tpublic {class_name} delete{class_name}(@PathVariable {get_id_type(get_id_row(content))} id) {{\n" + \
-           f"\t\treturn {class_name.lower()}Service.delete{class_name}(id);\n" + \
+           f"\tpublic void delete{class_name}(@PathVariable {get_id_type(get_id_row(content))} id) {{\n" + \
+           f"\t\t{class_name.lower()}Service.delete{class_name}(id);\n" + \
            "\t}\n\n"
 
 
