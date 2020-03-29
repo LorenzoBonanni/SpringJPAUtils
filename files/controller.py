@@ -4,7 +4,7 @@ from utils import *
 def create_get_all(class_name):
     return "\t@RequestMapping(method = RequestMethod.GET)\n" + \
            f"\tpublic {class_name}Wrapper get{class_name}s() {{\n" + \
-           f"\t\treturn new {class_name}Wrapper({class_name}Service.get{class_name}s());\n" + \
+           f"\t\treturn new {class_name}Wrapper({class_name.lower()}Service.get{class_name}s());\n" + \
            "\t}\n\n"
 
 
